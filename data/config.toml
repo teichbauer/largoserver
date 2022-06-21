@@ -1,0 +1,9 @@
+[mongo-db]
+host = '172.21.57.86'
+port = 27017
+meta_db_name = 'LMETA'
+app_db_name = 'LDB'
+
+[fastapi]
+host = 'localhost'
+port = 5002
