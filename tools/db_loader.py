@@ -7,7 +7,7 @@ def load_meta(db, cn_dics):
             if not ret:
                 return False
     return True
-
+ 
 def load_db(db, cn_dics):
     return True
 

@@ -11,11 +11,11 @@
             'mstatus': 'mrd',
             'dob': '1893-12-26',
             'dod': '1976-09-06',
-            'pob': {
+            'LS_pob': {
                 'en': 'China Hubei Shaoshan-Chong',
                 'zh': '中国湖北韶山冲',
             },
-            'pod': {
+            'LS_pod': {
                 'en': 'China Hebei Beijing',
                 'zh': '中国',
             }

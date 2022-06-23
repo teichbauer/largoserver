@@ -7,6 +7,12 @@ data = {
         'cat': 'PS001',
         'nick-name': 'single person',
         'properties': {
+            'LS_name': {
+                'descr': 'formal name in diff languages',
+                'type': 'LS-dict of utf-8 str', 
+                # value: {'en':'..','zh':'..',...}
+                'required': True,
+            },
             'sex': {    # male, female
                 'descr': 'gender',
                 'type': 'str',
@@ -37,19 +43,19 @@ data = {
                 # value: 2022, 2022-04, 2022-01-30, 2022-02-13
                 'required': False,
             },
-            'pob': {
+            'LS_pob': {
                 'descr': 'place of birth',
                 'type': 'LS-dict of utf-8 str', 
                 # value: {'en':'..','zh':'..',...}
                 'required': False,
             },
-            'pod': {
+            'LS_pod': {
                 'descr': 'place of death',
                 'type': 'LS-dict of utf-8 str', 
                 # value: {'en':'..','zh':'..',...}
                 'required': False,
             },
-            'brp': {
+            'LS_brp': {
                 'descr': 'burial place',
                 'type': 'LS-dict of utf-8 str', 
                 # value: {'en':'..','zh':'..',...}
@@ -108,7 +114,15 @@ data = {
         'cat': 'DS001',
         'nick-name': 'txt-doc: synopsis: textual file, intro of a person',
         'properties': {
-            'key-word': 'str',
+            'format': {
+                'descr': 'keyword for type of document',
+                'value': (
+                    'txt',  # utf-8 text file
+                    'pdf',  # PDF formatted file
+                    'wrd',  # MS word forma
+                    'unk',  # unknown
+                ),
+            },
             'type': 'txt',
             'date': 'date when it ihas been updated',
             'content': 'LS-str'

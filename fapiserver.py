@@ -6,7 +6,18 @@ import uvicorn
 from glob import glob
 from os import path
 import pdb
+from fastapi.middleware.cors import CORSMiddleware
+import json
 
+app = FastAPI()
+
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"],
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
 # -----------------------------------------------------------------------------
 # imports for python-mongo lib api, database/object-models
 # -----------------------------------------------------------------------------
