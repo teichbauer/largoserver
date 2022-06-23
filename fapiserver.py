@@ -49,6 +49,11 @@ fapi_port = CONF['fastapi']['port']
 async def index():
     return {'hello': "World!"}
 
+@app.get("/login")
+async def index(email:str, pwd:str):
+    print(f'email: {email}, pwd: {pwd}')
+    return {'hello': "World!", "email": email, "pwd": pwd}
+
 @app.get('/load_db')
 async def load_db():
     from tools.db_loader import load_db

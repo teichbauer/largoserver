@@ -1,3 +1,26 @@
+### 2022-06-23a
+---
+- aded:
+  ```
+  @app.get("/login")
+  async def index(email:str, pwd:str):
+      print(f'email: {email}, pwd: {pwd}')
+      return {'hello': "World!", "email": email, "pwd": pwd}
+  ```
+  So when the flutter app send the url:
+  ```dart
+  String email = 'wei@outlook.com';
+  String pwd = 'secret';
+  String url = 'http://172.25.248.31:5002/login/?email=$email&  pwd=$pwd';
+  final uri = Uri.parse(url);
+  ...
+  Response response = await get(uri);
+  ```
+  it will responds back the json: 
+  ```
+  {email: 'wei@outlook.com', pwd: 'secret'}
+  ```
+
 ### 2022-06-23
 ---
 - added:
@@ -20,7 +43,7 @@
   and use this in flutter app http:
   uri = Uri.parse('http://172.25.248.31:5002')
   resp = get(uri)
-  
+
 
 
 ### 2022-06-21
